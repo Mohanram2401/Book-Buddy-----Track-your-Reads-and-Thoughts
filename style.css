@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%; /* Ensure the entire page takes full height */
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* Make the body a flex container */
+    background-color: #FAF3E0; /* Light cream background */
+}
+
+.navbar {
+    background-color: #FF6F61; /* Coral */
+    color: white;
+    padding: 10px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.bcon {
+    flex: 1; /* Allow the content area to grow and push the footer to the bottom */
+    display: flex;
+    flex-wrap: wrap; /* Allow books to wrap */
+    justify-content: center; /* Center the book sections horizontally */
+    align-items: flex-start; /* Align items to the start vertically */
+    padding: 20px; /* Add some padding around the content */
+}
+
+.booksection {
+    width: 250px; /* Fixed width */
+    height: 300px; /* Fixed height */
+    padding: 10px;
+    margin: 20px;
+    border-radius: 15px;
+    display: inline-block; /* Make it inline and allow it to wrap to next line */
+    vertical-align: top; /* Align items to the top of the row */
+}
+
+/* Different background colors for each book */
+.booksection:nth-child(odd) {
+    background-color: #FFD700; /* Gold */
+}
+
+.booksection:nth-child(even) {
+    background-color: #90EE90; /* Light Green */
+}
+
+.booksection:nth-child(3) {
+    background-color: #ADD8E6; /* Light Blue */
+}
+
+.booksection:nth-child(4) {
+    background-color: #FFB6C1; /* Light Pink */
+}
+
+.booksection:nth-child(5) {
+    background-color: #DDA0DD; /* Plum */
+}
+
+.booksection:nth-child(6) {
+    background-color: #FFDEAD; /* Navajo White */
+}
+
+.books h2 {
+    color: red;
+    background-color: black;
+    border-radius: 25px;
+    display: inline-block; /* Adjust background width to fit text */
+    padding: 5px 10px;
+}
+
+.books {
+    text-align: center;
+    width: auto;
+}
+
+.shw {
+    background-color: rgb(76, 255, 40);
+    width: 60px;
+    height: 20px;
+    margin-top: 10px;
+    margin-right: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+.del {
+    background-color: rgb(255, 45, 45);
+    width: 60px;
+    height: 20px;
+    margin-top: 10px;
+    margin-left: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+.ad {
+    border-radius: 100%;
+    font-size: 30px;
+    padding: 10px 20px;
+    background-color: rgb(43, 137, 238);
+    border: none;
+    position: fixed;
+    bottom: 90px; /* Position above the footer */
+    right: 25px; /* Position the button at the bottom-right */
+    z-index: 10; /* Ensure it appears above other content */
+}
+
+.overlay {
+    background-color: black;
+    opacity: 0.8;
+    position: fixed; /* Use fixed to cover the entire screen */
+    width: 100%;
+    height: 100%;
+    top: 0; /* Start from the top */
+    left: 0; /* Start from the left */
+    z-index: 1; /* Layer above other content */
+    display: none; /* Hidden by default */
+}
+
+.popup {
+    background-color: aliceblue;
+    width: 400px;
+    height: 350px;
+    padding: 20px;
+    position: absolute;
+    left: 35%;
+    top: 50%;
+    border-radius: 10px;
+    z-index: 1;
+    display: none;
+}
+
+
+
+.popup input {
+    background: transparent;
+    width: 100%;
+    padding: 5px;
+    margin: 5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-size: 20px;
+    font-family: cursive;
+}
+
+.popup textarea {
+    background: transparent;
+    border-bottom: 2px solid grey;
+    font-size: 20px;
+    font-family: cursive;
+    width: 405px;
+    height: 116px;
+}
+
+.popup button {
+    background-color: rgb(50, 84, 255);
+    font-family: cursive;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+footer {
+    background-color: #D04E47; /* Dark coral */
+    color: white;
+    border-end-end-radius: 15px;
+    border-end-start-radius: 15px;
+    width: 100%;
+    height: 50px; /* Set a specific height for the footer */
+    text-align: center;
+    padding: 10px 0; /* Add padding for better appearance */
+    position: relative;
+    flex-shrink: 0; /* Ensure the footer stays at the bottom */
+}
+footer a{
+    color: white;
+}
